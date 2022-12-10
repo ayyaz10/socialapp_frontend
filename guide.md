@@ -3,7 +3,7 @@ dependencies
 sanity/client: use to connect sanity backend | command: npm install -g @sanity/client
 sanity/image-url: use to connect sanity backend
 react-google-login: for google authentication
-react-icons: react icons
+react-icons: for react icons
 npm install react-loader-spinner --save
 react-masonry-css: allows to create masonary image grid
 react-router-dom: provide different react routers 
