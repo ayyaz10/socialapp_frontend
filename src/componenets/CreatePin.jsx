@@ -31,7 +31,6 @@ const CreatePin = ({ user }) => {
         .upload('image', e.target.files[0], {contentType: type, filename: name})
         .then((document) => {
           setImageAsset(document);
-          console.log(document)
           setLoading(false)
         })
         .catch(error => {
@@ -64,8 +63,10 @@ const CreatePin = ({ user }) => {
         category
       }
       client.create(doc) 
-      .then(() => {
-        navigate('/');
+      .then((data) => {
+        if(data) {
+          navigate('/');
+        }
       })
     } else {
       setFields(true);
@@ -99,7 +100,7 @@ const CreatePin = ({ user }) => {
               </label>
             ): (
               <div className='relative h-full'>
-                <img src={imageAsset?.url} alt="uploaded-image" className='h-full w-full' />
+                <img src={imageAsset?.url} alt="uploaded-image" className='h-full w-full object-cover' />
                 <button 
                   type='button'
                   className='absolute bottom-3 right-3 padding-3 rounded-full bg-white text-xl cursor-poniter outline-none hover-shadow-md transistion-all duration-500 ease-in-out'

@@ -16,9 +16,8 @@ const Home = () => {
   const [toggleSidebar, settoggleSidebar] = useState(false);
   const [user, setUser] = useState(null)
   const scrollRef = useRef(null);
-
   const userInfo = fetchUser();
-
+  
   useEffect(() => {
     const query = userQuery(userInfo?.sub);
     client.fetch(query)
