@@ -1,6 +1,7 @@
 // rafce
 import React from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Switch } from "react-router-dom";
+import { Feed, UserProfile } from "./componenets";
 import Login from "./componenets/Login";
 import Home from "./container/Home";
 
