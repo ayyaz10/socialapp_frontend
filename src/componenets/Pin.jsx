@@ -55,7 +55,7 @@ const Pin = ({pin: {_id, destination, image, postedBy, save }}) => {
             className="relative curson-zoom-in w-auto hover:shadow-lg rounded-lg overflow-hidden transition-all duration-500 ease-in-out"
         >
             <img className="rounded-lg w-full" src={urlFor(image).width(250).url()} alt="user-post" />
-            {postHovered && ( 
+            {postHovered && {
                 <div 
                     className="absolute top-0 w-full h-full flex flex-col justify-between p-1 pr-2 pt-2 pb-2 z-50"
                     style={{height: '100%'}}  
@@ -111,7 +111,7 @@ const Pin = ({pin: {_id, destination, image, postedBy, save }}) => {
                         )}
                     </div>
                 </div>
-            )} 
+            }} 
         </div>
         <Link to={`user-profile/${postedBy?._id}`} className="flex gap-2 mt-2 items-center">
             <img 
