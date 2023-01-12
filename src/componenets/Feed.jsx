@@ -8,12 +8,12 @@ import Spinner from './Spinner';
 const Feed = () => {
   const [loading, setLoading] = useState(false);
   const [pins, setPins] = useState(null);
-  const {category} = useParams();
-
+  const {categoryId} = useParams();
+  console.log(categoryId)
   useEffect(() => {
     setLoading(true);
-    if(category) {
-      const query = searchQuery(category);
+    if(categoryId) {
+      const query = searchQuery(categoryId);
       client.fetch(query)
       .then((data) => {
         setPins(data);
@@ -26,12 +26,14 @@ const Feed = () => {
         setLoading(false)
       })
       .catch(error => {
-        console.error(error, 'thsi is an error')
+        console.error(error, 'this is an error')
       })
     }
-  }, [category])
+  }, [categoryId])
 
   if(loading) return <Spinner message="We are adding new ideas to your feed!"/>
+  if(!pins?.length) return <h2>No Pins available</h2>
+  
   return (
     <div>{pins && <MasonryLayout pins={pins}/>}</div>
   )
