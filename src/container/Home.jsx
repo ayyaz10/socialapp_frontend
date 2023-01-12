@@ -29,6 +29,7 @@ const Home = () => {
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
   }, [])
+  
 
   return (
     <div className='flex bg-gray-50 md:flex-row flex-col h-screen transtion-height duration-75 ease-out'>
@@ -61,7 +62,6 @@ const Home = () => {
         </Routes>
       </div>
     </div>
-
   )
 }
 

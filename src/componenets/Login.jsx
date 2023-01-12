@@ -64,9 +64,7 @@ const Login = () => {
         <div className="p-5">
           <img src={logo} width="130px" alt="logo" />
         </div>
-          <div id="signInButton" className="shadow-2xl">
-
-          </div>
+          <div id="signInButton" className="shadow-2xl"></div>
         </div>
       </div>
     </div>
