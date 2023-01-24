@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
 // import GoogleLogin from '';
-import { GoogleLogin, googleLogout } from '@react-oauth/google';
-import { GoogleOAuthProvider } from '@react-oauth/google';
+// import { GoogleLogin, googleLogout } from '@react-oauth/google';
+// import { GoogleOAuthProvider } from '@react-oauth/google';
 import jwt_decode from "jwt-decode";
 
-import { Navigate, useNavigate } from 'react-router-dom';
-import {FcGoogle} from 'react-icons/fc'; 
+import { useNavigate } from 'react-router-dom';
+// import {FcGoogle} from 'react-icons/fc'; 
 import logo from '../assets/logo-light.png';
 import bgVideo from '../assets/bg-video.mp4';
 
 
 import { client } from '../client';
 
+const google = window.google;
+console.log(google)
 const Login = () => {
   const navigate = useNavigate();
   function handleCredentialResponse(response) {

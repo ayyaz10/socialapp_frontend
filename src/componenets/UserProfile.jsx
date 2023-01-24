@@ -69,13 +69,13 @@ const UserProfile = () => {
               alt="banner-picture"
              />
              <img
-               src={user.image}
+               src={user?.image}
                className='rounded-full w-20 h-20 -mt-10 shadow-xl object-cover'
                alt="user-picture" 
               />
-              <h1 className='font-bold text-3xl text-center mt-3'>{user.userName}</h1>
+              <h1 className='font-bold text-3xl text-center mt-3'>{user?.userName}</h1>
               <div className="absolute top-0 z-1 right-0 p-2">
-                {userId === user._id && (
+                {userId === user?._id && (
                   <div
                     className="bg-white p-2 rounded-full cursor-pointer outline-none shadow-md"
                   >

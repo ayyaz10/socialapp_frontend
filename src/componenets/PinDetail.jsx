@@ -28,7 +28,7 @@ const PinDetail = ({ user }) => {
           _key: uuidv4(),
           postedBy: {
             _type: 'postedBy',
-            _ref: user._id
+            _ref: user?._id
           }
         }])
         .commit()
